@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eastortag-rowlocate"
+version = "0.1.0"
+description = "把输入按语义边界切成独立单元，逐单元核对表格检索的行级定位相关的特征并标出命中位置"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "eastortag" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://eastortag.github.io"
+Repository = "https://github.com/eastortag/rowlocate"
+Issues = "https://github.com/eastortag/rowlocate/issues"
+
+[project.scripts]
+rowlocate = "rowlocate:main"
+
+[tool.setuptools]
+py-modules = ["rowlocate"]
